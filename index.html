@@ -7,32 +7,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Tomar Pedido</h1>
-    <form id="pedidoForm">
-        <label for="mesaSelect">Mesa:</label>
-        <select id="mesaSelect" required>
-            <option value="">Selecciona la mesa</option>
-            <!-- Aquí se agregarán las opciones de las mesas desde JavaScript -->
-        </select>
-        <br>
+      <div id="app" class="box">
+        <h1>Tomar Pedido</h1>
+        <hr />
+        <form id="pedidoForm">
+          <div>
+            <label for="mesaSelect">Mesa:</label>
+            <select id="mesaSelect" required>
+                <option value="">Selecciona la mesa</option>
+                <!-- Aquí se agregarán las opciones de las mesas desde JavaScript -->
+            </select>
 
-        <label for="tipoPlatoSelect">Tipo de Plato:</label>
-        <select id="tipoPlatoSelect" onchange="actualizarPlatos()" required>
-            <option value="">Selecciona el tipo de plato</option>
-            <!-- Aquí se agregarán las opciones de tipos de platos desde JavaScript -->
-        </select>
-        <br>
+            <label for="tipoPlatoSelect">Tipo de Plato:</label>
+            <select id="tipoPlatoSelect" onchange="actualizarPlatos()" required>
+                <option value="">Selecciona el tipo de plato</option>
+                <!-- Aquí se agregarán las opciones de tipos de platos desde JavaScript -->
+            </select>
 
-        <div id="platosDisponibles">
-            <!-- Aquí se mostrarán los platos disponibles -->
-        </div>
+            <button type="button" onclick="enviarPedido()">Enviar Pedido</button>
+          </div>
+          <div>
+            <div id="platosDisponibles">
+                <!-- Aquí se mostrarán los platos disponibles -->
+            </div>
 
-        <div id="pedidoList">
-            <!-- Aquí se mostrarán los platos agregados con su cantidad -->
-        </div>
-
-        <button type="button" onclick="enviarPedido()">Enviar Pedido</button>
-    </form>
+            <div id="pedidoList">
+                <!-- Aquí se mostrarán los platos agregados con su cantidad -->
+            </div>
+          <div>
+        </form>
+      </div>
 
     <script src="scripts.js"></script>
 </body>

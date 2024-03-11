@@ -60,6 +60,15 @@ function agregarPlato(plato, cantidad) {
     const pedidoList = document.getElementById("pedidoList");
     const pedidoItem = document.createElement("div");
     const cantidadSpan = document.createElement("span");
+
+    if( !document.querySelector("p#header") ){
+      const p = document.createElement("p")
+      const text = document.createTextNode("Pedidos del cliente:")
+      p.id = "header"
+      p.appendChild(text)
+      pedidoList.appendChild(p)
+    }
+
     cantidadSpan.textContent = cantidad;
     const platoP = document.createElement("p");
     platoP.textContent = plato;
