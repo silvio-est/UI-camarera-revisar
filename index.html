@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomar Pedido</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Tomar Pedido</h1>
+    <form id="pedidoForm">
+        <label for="mesaSelect">Mesa:</label>
+        <select id="mesaSelect" required>
+            <option value="">Selecciona la mesa</option>
+            <!-- Aquí se agregarán las opciones de las mesas desde JavaScript -->
+        </select>
+        <br>
+
+        <label for="tipoPlatoSelect">Tipo de Plato:</label>
+        <select id="tipoPlatoSelect" onchange="actualizarPlatos()" required>
+            <option value="">Selecciona el tipo de plato</option>
+            <!-- Aquí se agregarán las opciones de tipos de platos desde JavaScript -->
+        </select>
+        <br>
+
+        <div id="platosDisponibles">
+            <!-- Aquí se mostrarán los platos disponibles -->
+        </div>
+
+        <div id="pedidoList">
+            <!-- Aquí se mostrarán los platos agregados con su cantidad -->
+        </div>
+
+        <button type="button" onclick="enviarPedido()">Enviar Pedido</button>
+    </form>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
